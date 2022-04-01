@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+
+{# {% form_theme formComment 'bootstrap_5_layout.html.twig' %} #}
+
+{% block body %}
+
+    <article>
+        <h2>{{ article.title }}</h2>
+        <div class="metadata">ecrit le {{ article.createdAt | date("d/m/Y") }} à {{ article.createdAt | date("H:i") }} dans la catégorie {{ article.category.title }}</div>
+        <div class="content">
+            <img src="{{ article.image }}" alt="">
+            {{ article.content | raw }}
+        </div>
+            <a class="btn btn-primary" href="{{ path("blog_edit", {"id" : article.id}) }}" role="button">Modifier l'article</a>
+            <form method="post" action="{{ path('app_delete', {'id': article.id}) }}" onsubmit="return confirm('Voulez-vous vraiment supprimer cet article ?');">
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
+                <button class="btn btn-primary">Supprimer</button>
+            </form>
+            <a class="btn btn-primary" href="{{ path("app_blog") }}" role="button">Retour</a>
+    </article>
+
+    <section id="commentaires">
+    {% for comment in article.comments %}
+        <hr/>
+        <div class="comment">
+            <div class="row">
+                <div class="col-3">
+                    {{comment.author}} (<small>{{comment.createdAt | date("d/m/Y à H:i")}}</small>)
+                </div>
+                <div class="col">
+                    {{comment.content | raw}}
+                </div>
+            </div>
+        </div>
+        
+    {% endfor %}
+    </section>
+    <br>
+    <hr style="height:8px;"/>
+    <br>
+
+    {{ form_start(formComment) }}
+
+    {{ form_row(formComment.author, { "label": "Votre nom" }) }}
+    {{ form_row(formComment.content,{ "label": "Votre commentaire" }) }}
+
+    <button type="submit" class="btn btn-success">Valider</button>
+
+    {{ form_end(formComment) }}
+
+{% endblock %}
