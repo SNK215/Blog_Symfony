@@ -107,7 +107,7 @@ class BlogController extends AbstractController
             "formComment" => $form->createView(),
             "article" => $article
         ]);
-    }
+    }                      
 
     /**
      * @Route("/{id}", name="app_delete", methods={"POST"})
