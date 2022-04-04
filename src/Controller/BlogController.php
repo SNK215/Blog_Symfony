@@ -110,7 +110,7 @@ class BlogController extends AbstractController
     }                      
 
     /**
-     * @Route("/{id}", name="app_delete", methods={"POST"})
+     * @Route("/delete/{id}", name="app_delete", methods={"POST"})
      */
     public function delete(Request $request, Article $article, ArticleRepository $articleRepository): Response
     {
