@@ -104,7 +104,9 @@ class __TwigTemplate_b8ad31b09c722e806a3857986c3584e5c9fe6646cfb0d23e7b875e83260
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 12), "d/m/Y"), "html", null, true);
             echo " à ";
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "createdAt", [], "any", false, false, false, 12), "H:i"), "html", null, true);
-            echo " dans la catégorie Sport</div>
+            echo " dans la catégorie ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["article"], "category", [], "any", false, false, false, 12), "title", [], "any", false, false, false, 12), "html", null, true);
+            echo "</div>
         <div class=\"content\">
             <img src=\"";
             // line 14
@@ -152,7 +154,7 @@ class __TwigTemplate_b8ad31b09c722e806a3857986c3584e5c9fe6646cfb0d23e7b875e83260
 
     public function getDebugInfo()
     {
-        return array (  131 => 22,  120 => 17,  115 => 15,  111 => 14,  104 => 12,  100 => 11,  97 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  133 => 22,  122 => 17,  117 => 15,  113 => 14,  104 => 12,  100 => 11,  97 => 10,  93 => 9,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -168,7 +170,7 @@ class __TwigTemplate_b8ad31b09c722e806a3857986c3584e5c9fe6646cfb0d23e7b875e83260
     {% for article in articles %}
     <article>
         <h2>{{ article.title }}</h2>
-        <div class=\"metadata\">Ecrit le {{ article.createdAt | date(\"d/m/Y\") }} à {{ article.createdAt | date(\"H:i\") }} dans la catégorie Sport</div>
+        <div class=\"metadata\">Ecrit le {{ article.createdAt | date(\"d/m/Y\") }} à {{ article.createdAt | date(\"H:i\") }} dans la catégorie {{ article.category.title }}</div>
         <div class=\"content\">
             <img src=\"{{ article.image }}\" alt=\"\">
             {{ article.content | raw }}
@@ -182,6 +184,7 @@ class __TwigTemplate_b8ad31b09c722e806a3857986c3584e5c9fe6646cfb0d23e7b875e83260
 </section>
 
 {% endblock %}
-", "blog/index.html.twig", "C:\\Users\\59013-65-13\\demo\\templates\\blog\\index.html.twig");
+
+", "blog/index.html.twig", "C:\\Users\\User1\\Documents\\Projet_Symfony\\Blog_Symfony\\templates\\blog\\index.html.twig");
     }
 }

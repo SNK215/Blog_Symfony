@@ -109,6 +109,6 @@ class __TwigTemplate_33543ec9f7c27ce8da84bb30dfdfa88f4837f565e44915c3834b79ffe43
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti asperiores ipsum beatae quis sunt quia molestiae amet. Illum, sunt eveniet? Sapiente aliquam, pariatur magni vero consequuntur, quia velit rerum perspiciatis eum quisquam ea excepturi dolorum, reiciendis quis voluptatem fugit reprehenderit?</p>
 <p>Voluptate nobis voluptates consequatur. Fuga aliquid eaque fugit assumenda voluptate ad vel aut repellat. Nihil, fugit? Exercitationem eius commodi ratione nam alias ex similique! Illo unde minus explicabo delectus molestias rerum, exercitationem odio, perspiciatis voluptatum aperiam est maxime, rem ipsa.</p>
 
-{% endblock %}", "blog/home.html.twig", "C:\\Users\\59013-65-13\\demo\\templates\\blog\\home.html.twig");
+{% endblock %}", "blog/home.html.twig", "C:\\Users\\User1\\Documents\\Projet_Symfony\\Blog_Symfony\\templates\\blog\\home.html.twig");
     }
 }

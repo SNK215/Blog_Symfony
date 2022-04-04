@@ -70,10 +70,10 @@ return [[
 '[C]App%5CController%5CBlogController%23home' => 1,
 'App%5CController%5CBlogController%23form' => 4,
 '[C]App%5CController%5CBlogController%23form' => 1,
-'App%5CController%5CBlogController%23choose' => 5,
-'[C]App%5CController%5CBlogController%23choose' => 1,
-'App%5CController%5CBlogController%23show' => 6,
+'App%5CController%5CBlogController%23show' => 5,
 '[C]App%5CController%5CBlogController%23show' => 1,
+'App%5CController%5CBlogController%23delete' => 6,
+'[C]App%5CController%5CBlogController%23delete' => 1,
 'App%5CEntity%5CArticle' => 7,
 '[C]App%5CEntity%5CArticle' => 1,
 'App%5CEntity%5CArticle%23__construct' => 0,
@@ -726,7 +726,7 @@ return [[
 ], [
 
 0 => [],
-1 => 1648718566,
+1 => 1649064915,
 2 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
@@ -806,10 +806,10 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/blog/choose',
+                    '/blog/{id}',
                 ],
                 'name' => [
-                    'blog_choose',
+                    'blog_show',
                 ],
             ],
         ],
@@ -828,10 +828,15 @@ return [[
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/blog/{id}',
+                    '/{id}',
                 ],
                 'name' => [
-                    'blog_show',
+                    'app_delete',
+                ],
+                'methods' => [
+                    [
+                        'POST',
+                    ],
                 ],
             ],
         ],

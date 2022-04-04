@@ -89,21 +89,15 @@ class __TwigTemplate_5ef55d10b1444506a1fdafeb99e4892844fc01621453c596c05a593805a
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_create");
         echo ">Créer un article</a>
                     </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=";
-        // line 33
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("blog_choose");
-        echo ">Modifier un article</a>
-                    </li>
                 </ul>
             </div>
             </div>
         </nav>
         <div class=\"container\">
             ";
-        // line 40
+        // line 37
         $this->displayBlock('body', $context, $blocks);
-        // line 41
+        // line 38
         echo "        </div>
     </body>
 </html>
@@ -181,7 +175,7 @@ class __TwigTemplate_5ef55d10b1444506a1fdafeb99e4892844fc01621453c596c05a593805a
 
     }
 
-    // line 40
+    // line 37
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -211,7 +205,7 @@ class __TwigTemplate_5ef55d10b1444506a1fdafeb99e4892844fc01621453c596c05a593805a
 
     public function getDebugInfo()
     {
-        return array (  185 => 40,  172 => 13,  162 => 12,  149 => 9,  139 => 8,  120 => 5,  107 => 41,  105 => 40,  95 => 33,  89 => 30,  83 => 27,  72 => 19,  66 => 15,  64 => 12,  61 => 11,  59 => 8,  53 => 5,  47 => 1,);
+        return array (  179 => 37,  166 => 13,  156 => 12,  143 => 9,  133 => 8,  114 => 5,  101 => 38,  99 => 37,  89 => 30,  83 => 27,  72 => 19,  66 => 15,  64 => 12,  61 => 11,  59 => 8,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -247,9 +241,6 @@ class __TwigTemplate_5ef55d10b1444506a1fdafeb99e4892844fc01621453c596c05a593805a
                     <li class=\"nav-item\">
                         <a class=\"nav-link\" href={{ path(\"blog_create\") }}>Créer un article</a>
                     </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link\" href={{ path(\"blog_choose\") }}>Modifier un article</a>
-                    </li>
                 </ul>
             </div>
             </div>
@@ -259,6 +250,6 @@ class __TwigTemplate_5ef55d10b1444506a1fdafeb99e4892844fc01621453c596c05a593805a
         </div>
     </body>
 </html>
-", "base.html.twig", "C:\\Users\\59013-65-13\\demo\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\User1\\Documents\\Projet_Symfony\\Blog_Symfony\\templates\\base.html.twig");
     }
 }
